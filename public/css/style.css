@@ -1,0 +1,157 @@
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+    background: url('https://images.unsplash.com/photo-1487088678257-3a541e6e3922?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8cXVvdGUlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60');
+    overflow-x: hidden;
+}
+
+h1{
+    color: red;
+    background-color: whitesmoke;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.fa-thumbs-down:before {
+    position: relative;
+    content: "\f165";
+    top: 3px;
+}
+
+ul li{
+    margin-top: 15px;
+    padding: 15px 10px 15px 5px;
+    border-bottom: 2px solid black;
+    width: 90%;
+    font-size: 18px;
+}
+
+.quote-container{
+    display: flex;
+    margin-top: 2%;
+    width: 100%;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+    margin-bottom: 2%;
+}
+.quote-container h2{
+    text-align: center;
+}
+
+.likes{
+    display: flex;
+    margin-top: 10px;
+}
+#likes{
+    margin-right: 10px;
+}
+.fa{
+    margin-right: 10px;
+}
+#authorName::before{
+    content: ' - ';
+}
+
+.likes::before{
+    content: 'Likes: ';
+}
+
+.quotesList{
+    background-color: whitesmoke;
+    height: 70vh;
+    overflow-y: scroll;
+    scroll-behavior: auto;
+    border: 2px solid black;
+    width: 45%;
+    border-radius: 15px;
+}
+
+.addQuote{
+    border: 2px solid black;
+    background-color: whitesmoke;
+    width: 45%;
+    border-radius: 15px;
+    padding: 5px 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form input{
+    padding: 10px 15px;
+    border: 2px solid gray;
+    border-radius: 10px;
+    width: 75%;
+    margin: auto;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.submit-btn{
+    padding: 12px 30px;
+    font-size: 19px;
+    width: auto;
+}
+
+.submit-btn:hover{
+    cursor: pointer;
+}
+
+footer{
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.fa-github{
+    font-size: 30px;
+}
+footer a{
+    color: black;
+}
+footer a:hover{
+    transform: scale(1.5);
+    color: black;
+}
+#dev{
+    font-size: 20px;
+    color: black;
+    margin: 10px;
+    text-decoration: none;
+}
+#dev:hover{
+    text-decoration: underline;
+    cursor: pointer;
+    color: black;
+    transform: none;
+}
+
+
+@media screen and (max-width: 900px){
+    .quote-container{
+        flex-direction: column-reverse;
+    }
+    .quotesList,.addQuote{
+        width: 90%;
+        margin: auto;
+        margin-bottom: 5%;
+        min-height: 500px;
+    }
+    .addQuote{
+        width: 80%;
+        height: 100%;
+        min-height: 350px;
+    }
+}

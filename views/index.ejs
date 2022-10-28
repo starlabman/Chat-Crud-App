@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/4fc31833c8.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <title>Chat App</title>
+</head>
+
+<body>
+  <h1>Motivational Quotes</h1>
+  <div class="quote-container">
+    <div class="quotesList">
+      <h2 class="quote-heading">Quotes List</h2>
+      <ul class="quotes">
+        <% for(let i=0; i < info.length; i++) {%>
+          <li class="quote">
+            <span id="quoteName">
+              <%= info[i].quoteName %>
+            </span>
+            <span id="authorName">
+              <%= info[i].authorName %>
+            </span>
+            <div class="likes">
+              <span id="likes">
+                <%= info[i].likes %>
+              </span>
+              <span class="fa fa-thumbs-up"></span>
+              <span class="fa fa-thumbs-down"></span>
+              <span class="fa fa-trash"></span>
+            </div>
+          </li>
+          <% } %>
+      </ul>
+    </div>
+
+    <div class="addQuote">
+      <h2>Add Your Messages</h2>
+      <form action="/addQuote" method="POST">
+        <input type="text" placeholder="Quote Name" name="quoteName" required />
+        <input type="text" placeholder="Author Name" name="authorName" required />
+        <input type="submit" class="submit-btn" />
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <a href="https://github.com/starlabman/Chat-crud"><i class="fa-brands fa-github"></i></a></i>
+    <a href="https://starlabman.netlify.app" id="dev">Developed by Laboré</a>
+  </footer>
+
+</body>
+<script src="js/main.js"></script>
+
+</html>
